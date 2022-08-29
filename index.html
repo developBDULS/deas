@@ -261,6 +261,13 @@ map.on('load', () => {
     // Add the image to the map style.
     map.addImage('maker', image);});
 
+    map.loadImage(
+    'media/ICONO DESFIBRILADOR AZUL 01.png',
+    (error, image) => {
+    if (error) throw error;    
+    // Add the image to the map style.
+    map.addImage('maker-blue', image);});
+
 
     map.once('idle', () => {
         d3.json("data/deas_collections.json", function (d) {
@@ -372,21 +379,11 @@ function addLayers(deas, nearest, route) {
 
     map.addLayer({
         'id': 'globe-newPoint',
-        'type': 'circle',
+        'type': 'symbol',
         'source': 'newPoint',
-        'paint': {
-            'circle-radius': [
-                'interpolate',
-                ['linear'],
-                ['zoom'],
-                0,
-                0.25,
-                3,
-                5
-            ],
-            'circle-opacity': 1,
-            'circle-blur': 0,
-            'circle-color': 'blue'
+        'layout': {
+        'icon-image': 'maker-blue', // reference the image
+        'icon-size': 0.75
         }
     });
 
