@@ -57,13 +57,13 @@ body { margin: 0; padding: 0; }
         border-radius: 3px;
     }
     #bduls-container {
-        padding: 10px;
+        padding: 5px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         line-height: 18px;
-        height: 105px;
+        height: 130px;
         margin-top: 40px;
         margin-left: 20px;
-        width: 200px;
+        width: 150px;
         text-align: center;
     }
     .bduls-info {
@@ -153,10 +153,10 @@ body { margin: 0; padding: 0; }
         border-radius: 3px;
     }
     #bduls-container {
-        padding: 10px;
+        padding: 5px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         line-height: 18px;
-        height: 120px;
+        height: 128px;
         margin-top: 15px;
         margin-left: 20px;
         width: 150px;
@@ -346,7 +346,7 @@ function addLayers(deas, nearest, route) {
             'line-cap': 'round'
         },
         'paint': {
-            'line-color': 'red',
+            'line-color': '#BF35F7',
             'line-width': [
                 'interpolate',
                 ['linear'],
@@ -422,9 +422,9 @@ const layers = [
 'Distancia'
 ];
 const colors = [
-'#BF35F7',
+'red',
 'blue',
-'red'
+'#BF35F7'
 ];
 
 const legend = document.getElementById('legend');
@@ -449,13 +449,13 @@ title_value.innerHTML = "<b>DEAs Cuarta Región</b>";
 title_container.appendChild(title_value);
 
 const img = document.createElement('img');
-img.src = 'media/logo-bigdatauls.png';
+img.src = 'media/LOGO GEORREFERENCIACIÓN BCO - 145X100-01-01.png';
 const info = document.getElementById('bduls-container');
 info.appendChild(img);
 
 const area = document.createElement('span');
 area.setAttribute('id','area-bigdata');
-area.innerHTML = "</br><b>Área de Georreferenciación</b>";
+area.innerHTML = "<b>Área Geospatial Data</b>";
 info.appendChild(area);
 
 }
